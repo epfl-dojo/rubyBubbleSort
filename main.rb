@@ -18,16 +18,15 @@
 
 def bubbleSort(tableau) 
   n = tableau.length()
-  loop do
-    swapper = false
+  begin
+    swapped = false
     for i in 1..n-1 do
       if tableau[i-1] > tableau[i]
         tableau[i],tableau[i-1] = tableau[i-1], tableau[i]
         swapped = true
       end
     end
-    break if not swapped
-  end
+    end while swapped
   puts tableau
 end
 bubbleSort([1,4,6,3.32345,3,0.3,2])
